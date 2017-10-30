@@ -1,0 +1,19 @@
+{
+  "name": "log_api",
+  "version": "1.0.0",
+  "description": "api for persisting logs in a db",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "^4.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/islogapi.git"
+  },
+  "author": "Nadia og Sami",
+  "license": "ISC"
+}
