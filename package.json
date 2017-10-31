@@ -4,6 +4,7 @@
   "description": "api for persisting logs in a db",
   "main": "index.js",
   "dependencies": {
+    "@types/body-parser": "^1.16.7",
     "body-parser": "^1.18.2",
     "mongoose": "^4.12.5"
   },
