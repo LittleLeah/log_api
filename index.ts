@@ -43,7 +43,7 @@ app.get("/dbcontent", (req, resp) => {
     
     MongoClient.connect(url, function(err, db) {
       if (err) throw err;
-      db.collection("logs").findOne({}, function(err, result) {
+      db.collection("logs").find({}, function(err, result) {
         if (err) throw err;
         console.log(result);
         db.close();
