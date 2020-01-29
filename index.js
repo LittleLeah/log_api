@@ -10,10 +10,10 @@ app.use(BodyParser.urlencoded({ extended: true }));
 Mongoose.Promise = BlueBird;
 var db = Mongoose.connection;
 var MongoClient = require('mongodb').MongoClient;
-var url = "'mongodb://LittleLeah:Fellini_2003@logdb-shard-00-00-pyaxd.mongodb.net:27017,logdb-shard-00-01-pyaxd.mongodb.net:27017,logdb-shard-00-02-pyaxd.mongodb.net:27017/test?ssl=true&replicaSet=LogDb-shard-0&authSource=admin";
+var url = "'";
 app.post("/", function (req, resp) {
     var action = req.body.action;
-    Mongoose.connect('mongodb://LittleLeah:Fellini_2003@logdb-shard-00-00-pyaxd.mongodb.net:27017,logdb-shard-00-01-pyaxd.mongodb.net:27017,logdb-shard-00-02-pyaxd.mongodb.net:27017/test?ssl=true&replicaSet=LogDb-shard-0&authSource=admin', { useMongoClient: true });
+    Mongoose.connect('', { useMongoClient: true });
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', function () {
         var Log_Schema = new Mongoose.Schema({
@@ -32,7 +32,7 @@ app.post("/", function (req, resp) {
 });
 app.get("/dbcontent", function (req, resp) {
     var MongoClient = require('mongodb').MongoClient;
-    var url = "mongodb://LittleLeah:Fellini_2003@logdb-shard-00-00-pyaxd.mongodb.net:27017,logdb-shard-00-01-pyaxd.mongodb.net:27017,logdb-shard-00-02-pyaxd.mongodb.net:27017/test?ssl=true&replicaSet=LogDb-shard-0&authSource=admin";
+    var url = "";
     MongoClient.connect(url, function (err, db) {
         if (err)
             throw err;
